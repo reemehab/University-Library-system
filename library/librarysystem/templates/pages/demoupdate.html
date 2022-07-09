@@ -1,0 +1,39 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="StyleSheet" type="text/css" href="{% static './css/seatssearch.css' %}">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'stylesheet.css'%}">
+        <style>
+            body {
+                background-image: url("{% static 'images/3.jpg' %}");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+     <body>
+         <div class="List">
+            <div class="container-md">
+            <div class="card car" style="width: 18rem;">
+                <div class="card-body">
+                     {% for obj in Profile %} 
+                    <h5 class="card-title"> name : {{ obj.username }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted"> email : {{ obj.email }}</h6>
+
+                <button type="button" class="btn btn-outline-secondary">
+                    <a href="{% url 'newuser' obj.profileID %}">Update Info</a>
+                </button>
+                   {% endfor %}
+                <button type="button" class="btn btn-outline-secondary">
+                    <a href="{% url 'home' %}">Back</a>
+                </button>
+            </div>
+        </div>
+    </div>
+     </div>
+ </body>
+</html>
+

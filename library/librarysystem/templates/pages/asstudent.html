@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="{% static 'javaScript.js'%}"></script>
+    <style>
+        body {
+            background-image: url("{% static 'images/3.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'stylesheet.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Student</title>
+</head>
+<body>
+    <div>
+    <div class="topnav">
+        <b style="font-weight: bold; font-size:larger" >University Library  <i class="fa fa-university" aria-hidden="true"></i> </b>
+        <div class="topnav-right">
+            <b style="font-weight: bold; font-size:larger" >WELCOME, STUDENT!</b>
+        </div>
+    </div>
+    <div class="topnav">
+            <select class="select"style="width:200px;">
+              <option value="0">Select Your Category</option>
+              <option value="1">Medcine</option>
+              <option value="2">Engineering</option>
+              <option value="3">Programming</option>
+              <option value="4">History</option>
+              <option value="5">Languages</option>
+              <option value="6">Arts</option>
+              <option value="7">Geography</option>
+              <option value="8">Archeology</option>
+              <option value="9">Economic</option>
+              <option value="10">Commerce</option>
+              <option value="11">Agriculture</option>
+            </select>
+        <div class="topnav-right">
+            <a href="http://127.0.0.1:8000\Student">Home<i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="#" onclick="loadAboutUs()"> About Us  <i class="fa fa-user"></i></a>
+            <a href="http://127.0.0.1:8000\StudentContactus" >Contact Us<i class="fa fa-phone" ></i></a>
+            <div class="menu">
+                <button class="dropbtn">Books 
+                  <i class="fa fa-book"></i>
+                </button>
+                <div class="menu-content">
+                 <a href="http://127.0.0.1:8000\listall">List All Books</a>
+                  <a href="http://127.0.0.1:8000\Borrow">Borrowed</a>
+                  <a href="#">High Rated</a>
+                  <a href="http://127.0.0.1:8000\search">Search By</a>
+                  <a href="#">Upcoming</a>
+                </div>
+            </div>
+            <div class="menu">
+                <button class="dropbtn">Menu 
+                  <i class="fa fa-bars"></i>
+                </button>
+                <div class="menu-content">
+                  <a href="#">New Events</a>
+                  <a href="#">Settings</a>
+                  <a href="#">Help</a>
+                  <a href="http://127.0.0.1:8000\updateuser">Update Your Account</a>
+                  <a href="http://127.0.0.1:8000">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="textHome">
+    <p style="font-size: 45px; color: white; font-weight: bolder;">University Library</p>
+    <p style="font-size: 30px; color: white; font-weight: bolder;">─────────────────</p>
+    <p style="font-size: 25px; color: white; font-weight: bolder;">Libraries store the energy that fuels the imagination.<br>
+         They open up windows to the world and inspire us to <br>explore and achieve,
+          and contribute to improving our quality of life.</p>
+</div>
+
+<div id="demo"></div>
+</body>
+</html>
